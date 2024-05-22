@@ -1,0 +1,114 @@
+<app-navbar />
+
+
+<body class="gray-900">
+    <div>
+        <!-- component -->
+
+        <body>
+            <section class="max-h-screen flex items-center text-white mt-19 sm:mt-19 lg:mt-24">
+                <div class="lg:flex w-1/2  hidden bg-transparent bg-no-repeat bg-cover relative items-center">
+                    <div class="w-full px-24 z-0">
+                        <h1 class="text-5xl font-bold text-left tracking-wide">Descubre tu entorno</h1>
+                        <p class="text-3xl my-4">El turismo urbano nunca fue tan fácil y atractivo.</p>
+                    </div>
+
+
+                    <div
+                        class="relative lg:w-1/2 w-full flex items-center justify-center text-center md:w-full sm:w-full px-0 z-0">
+                        <!-- Código existente del formulario -->
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0">
+                    <div class="relative lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center">
+
+                        <div class="relative sm:items-center sm:justify-center sm:bg-cover sm:bg-center sm:bg-no-repeat  sm:bg-fixed sm:bg-black sm:opacity-100 inset-0 z-0"
+                            style="background-image: url('https://i.pinimg.com/564x/8b/5e/f6/8b5ef64aef3cf359ffc0b1581a2201c7.jpg');">
+                        </div>
+                    </div>
+
+                    <div class="w-full  z-20">
+                        <div class="w-full z-20">
+                            <div class="sm:hidden md-block w-full  text-white">
+                                <h1 class="text-4xl font-bold tracking-wide mr-2 ml-2 mt-4 text-center md:text-center">
+                                    Descubre tu entorno</h1>
+                                <p class="text-2xl pt-5 m">El turismo urbano nunca fue tan fácil y atractivo.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-x-2">
+                        </div>
+                        <form method="POST" action="/login" class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto">
+                            <div class="mt-16 pb-2 pt-4">
+                                <input type="email" name="email" id="email" placeholder="Email"
+                                    class="block w-full p-4 text-lg rounded-sm bg-black" required>
+                            </div>
+                            <div class="pb-2 pt-4">
+                                <input class="block w-full p-4 text-lg rounded-sm bg-black" type="password"
+                                    name="password" id="password" placeholder="Contraseña" required>
+                            </div>
+                            <div class="text-right text-gray-400 hover:underline hover:text-gray-100">
+                                <a href="#">¿Olvidaste tu Contraseña?</a>
+                            </div>
+                            <div class="px-4 pb-2 pt-4">
+                                <button
+                                    class="uppercase block w-full p-4 text-lg rounded-full bg-blue-700 hover:bg-blue-800 focus:outline-none">Login</button>
+                            </div>
+                            <div class="px-4 pb-2 pt-4">
+                                <div class="flex mt-4 justify-center text-lg">
+                                    <a class="mb-5 text-white hover:text-blue-500 font-bold underline"
+                                        href="/register">¿Aún no tienes cuenta?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </body>
+
+
+        @defer (on immediate) {
+            <video autoplay loop muted plays-inline id="background-video" class="object-cover object-center w-full h-full">
+                <source src="/assets/images/global/earth.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        }@placeholder {
+            <div>CARFANDO</div>
+        }
+        
+
+
+        <style class="relative w-screen h-screen overflow-hidden">
+            .background-video {
+                position: relative;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            video#background-video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -1000;
+            }
+
+            .video-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.2);
+                /* Ajusta el último valor (0.5) para la opacidad */
+                z-index: -999;
+            }
+        </style>
+    </div>
+</body>
+
+
+<router-outlet />
