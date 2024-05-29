@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import 'flowbite';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-profile',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.css'
 })
-export class HomeComponent {
+export class ProfileComponent {
 
 }
